@@ -125,12 +125,11 @@ public class DynamicSphereMesh : MonoBehaviour
             Vector3 offset2 = res2 - center;
             Vector3 offset3 = res3 - center;
 
-            if (IsShowEdgeBorder)
-            {
-                _verts[_tris[i]] = center + offset1.normalized * (vertexOffsetToFaceCenter - EdgeBorder);
-                _verts[_tris[i + 1]] = center + offset2.normalized * (vertexOffsetToFaceCenter - EdgeBorder);
-                _verts[_tris[i + 2]] = center + offset3.normalized * (vertexOffsetToFaceCenter - EdgeBorder);
-            }
+            EdgeBorder = Mathf.Clamp(EdgeBorder, -vertexOffsetToFaceCenter * 0.99f, vertexOffsetToFaceCenter * 0.99f);
+
+            _verts[_tris[i]] = center + offset1.normalized * (vertexOffsetToFaceCenter - (IsShowEdgeBorder ? EdgeBorder : 0));
+            _verts[_tris[i + 1]] = center + offset2.normalized * (vertexOffsetToFaceCenter - (IsShowEdgeBorder ? EdgeBorder : 0));
+            _verts[_tris[i + 2]] = center + offset3.normalized * (vertexOffsetToFaceCenter - (IsShowEdgeBorder ? EdgeBorder : 0));
         }
     }
 
@@ -186,7 +185,7 @@ public class DynamicSphereMesh : MonoBehaviour
                 {
                     int sign = j < AnimationFrameDuration / 2 ? -1 : 1;
                     float minRatio = ShrinkRatio;
-                    float maxRatio = (vertexOffsetToFaceCenter - EdgeBorder) / vertexOffsetToFaceCenter;
+                    float maxRatio = (vertexOffsetToFaceCenter - (IsShowEdgeBorder ? EdgeBorder : 0)) / vertexOffsetToFaceCenter;
                     float length = 0;
                     if (sign > 0)
                     {
