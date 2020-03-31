@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b2425a2284af743826c689403a4924, type: 3}
+  m_Name: Annotated_BlinnPhong_Std
+  m_EditorClassIdentifier: 
+  m_functionInfo: "// Made with Amplify Shader Editor\n// Available at the Unity
+    Asset Store - http://u3d.as/y3X \n/*ASEBEGIN\nVersion=16200\n641;1;1918;1027;3111.653;930.7648;1.8052;True;False\nNode;AmplifyShaderEditor.CommentaryNode;48;-1528.008,473.6731;Float;False;734.3999;336.6;Albedo.;4;24;28;19;2;Diffuse
+    (Base) Color Contribution;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;33;-3195.286,-589.8191;Float;False;996;358;Fast
+    approximation of surface direction maximally geometrically reflective of direct
+    incident light.;4;36;37;35;34;Half Vector;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;38;-3088.703,-180.6389;Float;False;889.6;209.9999;Vertex
+    normal augmented by fragment normal information.;4;11;10;9;44;Surface Normal;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;39;-3081.284,184.9781;Float;False;885.4001;188.4;Direction
+    from surface to light.;1;13;Light Direction;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;43;-2142.158,144.8621;Float;False;451;224.7999;0
+    to 1 gradient - alignment of surf norm and light;2;5;27;Geometric Diffuse Output;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;45;-1521.226,-746.3394;Float;False;716.3845;262.1282;Sets
+    color of reflected light. Permits control over total specular via alpha.;4;12;23;17;3;Specular
+    Color Contribution;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;46;-1531.319,-373.6233;Float;False;729.6001;217.4;Uses
+    power operation to intensify and narrow specular reflection.;3;18;14;6;Specularity
+    (Shininess Adjustment);1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;47;-1530.306,-46.98859;Float;False;731.6001;435;Light
+    color passed to specular. Light color blended with flat color for diffuse.;6;16;1;29;49;4;50;Light
+    Color Contribution;1,1,1,1;0;0\nNode;AmplifyShaderEditor.CommentaryNode;40;-2156.26,-408.59;Float;False;451;224.7999;0
+    to 1 gradient - alignment of max and actual;2;25;30;Geometric Specular Output;1,1,1,1;0;0\nNode;AmplifyShaderEditor.ComponentMaskNode;19;-1007.605,532.5956;Float;False;True;True;True;False;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ColorNode;28;-1423.604,628.5944;Float;False;Property;_MainColor;Main
+    Color;0;0;Create;True;0;0;False;0;0.3921569,0.3921569,0.3921569,1;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.WorldNormalVector;11;-2616.702,-126.6389;Float;False;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.ComponentMaskNode;2;-1007.605,628.5944;Float;False;False;False;False;True;1;0;COLOR;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;30;-1840.096,-334.3022;Float;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.PowerNode;6;-1043.006,-334.6386;Float;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;4;-1288.153,36.19588;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ComponentMaskNode;23;-1081.226,-616.3403;Float;False;False;False;False;True;1;0;COLOR;0,0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.IndirectDiffuseLighting;50;-1202.122,290.614;Float;False;World;1;0;FLOAT3;0,0,1;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ColorNode;3;-1497.226,-696.3394;Float;False;Property;_SpecularColor;Specular
+    Color;1;0;Create;True;0;0;False;0;0.3921569,0.3921569,0.3921569,1;0,0,0,0;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4\nNode;AmplifyShaderEditor.FunctionInput;24;-1151.605,628.5944;Float;False;Diffuse;5;1;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;21;-531.0062,27.36138;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;52;-1636.252,270.9256;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.FunctionInput;17;-1257.226,-696.3394;Float;False;Specular;5;2;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0\nNode;AmplifyShaderEditor.NormalizeNode;37;-2417.289,-481.819;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;53;-1721.558,-96.22466;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.ComponentMaskNode;12;-1081.226,-696.3394;Float;False;True;True;True;False;1;0;COLOR;0,0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;26;-355.0062,-100.6386;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WireNode;51;-1647.643,-51.0013;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleMaxOpNode;27;-1823.794,205.9497;Float;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.ViewDirInputsCoordNode;35;-3127.286,-539.8191;Float;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.FunctionInput;44;-2804.566,-131.5011;Float;False;Normal;3;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;36;-2771.286,-479.819;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.LightColorNode;29;-1508.153,4.195867;Float;False;0;3;COLOR;0;FLOAT3;1;FLOAT;2\nNode;AmplifyShaderEditor.DotProductOpNode;5;-2060.544,207.1855;Float;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.Vector3Node;9;-3038.703,-130.6389;Float;False;Constant;_DefaultNormal;DefaultNormal;3;0;Create;True;0;0;False;0;0,0,1;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;7;-531.0062,-286.6386;Float;False;4;4;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;13;-2647.301,229.3118;Float;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.DotProductOpNode;25;-2064.246,-336.2665;Float;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;1;-1114.104,185.1339;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.SimpleAddOpNode;16;-922.1039,185.1339;Float;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.WorldSpaceLightDirHlpNode;34;-3175.286,-379.819;Float;False;False;1;0;FLOAT;0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3\nNode;AmplifyShaderEditor.LightAttenuation;49;-1518.429,120.769;Float;False;0;1;FLOAT;0\nNode;AmplifyShaderEditor.WireNode;54;-1595.558,319.7753;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.NormalizeNode;10;-2406.701,-126.6389;Float;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nNode;AmplifyShaderEditor.RangedFloatNode;14;-1507.006,-238.6386;Float;False;Property;_Shininess;Shininess;2;0;Create;True;0;0;False;0;0.1;0;0.01;1;0;1;FLOAT;0\nNode;AmplifyShaderEditor.SimpleMultiplyOpNode;18;-1203.006,-270.6386;Float;False;2;2;0;FLOAT;0;False;1;FLOAT;128;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;31;-208.6733,56.29303;Float;False;True;Alpha;1;False;1;0;FLOAT;0;False;1;FLOAT;0\nNode;AmplifyShaderEditor.FunctionOutput;32;-211.0062,-100.6386;Float;False;False;RGB;0;False;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0\nWireConnection;19;0;24;0\nWireConnection;11;0;44;0\nWireConnection;2;0;24;0\nWireConnection;30;0;25;0\nWireConnection;6;0;30;0\nWireConnection;6;1;18;0\nWireConnection;4;0;29;1\nWireConnection;4;1;49;0\nWireConnection;23;0;17;0\nWireConnection;50;0;54;0\nWireConnection;24;0;28;0\nWireConnection;21;0;16;0\nWireConnection;21;1;19;0\nWireConnection;52;0;51;0\nWireConnection;17;0;3;0\nWireConnection;37;0;36;0\nWireConnection;53;0;10;0\nWireConnection;12;0;17;0\nWireConnection;26;0;7;0\nWireConnection;26;1;21;0\nWireConnection;51;0;53;0\nWireConnection;27;0;5;0\nWireConnection;44;0;9;0\nWireConnection;36;0;35;0\nWireConnection;36;1;34;0\nWireConnection;5;0;10;0\nWireConnection;5;1;13;0\nWireConnection;7;0;12;0\nWireConnection;7;1;23;0\nWireConnection;7;2;6;0\nWireConnection;7;3;4;0\nWireConnection;25;0;37;0\nWireConnection;25;1;10;0\nWireConnection;1;0;4;0\nWireConnection;1;1;27;0\nWireConnection;16;0;1;0\nWireConnection;16;1;50;0\nWireConnection;54;0;52;0\nWireConnection;10;0;11;0\nWireConnection;18;0;14;0\nWireConnection;31;0;2;0\nWireConnection;32;0;26;0\nASEEND*/\n//CHKSM=0E8F4CFC6E3364F070FE51A09302109584B2CD38"
+  m_functionName: 
+  m_description: 
+  m_additionalIncludes:
+    m_additionalIncludes: []
+    m_outsideIncludes: []
+  m_additionalPragmas:
+    m_additionalPragmas: []
+    m_outsidePragmas: []
+  m_additionalDirectives:
+    m_validData: 0
+    m_isDirty: 0
+    m_moduleName: ' Additional Directives'
+    m_independentModule: 1
+    m_additionalDirectives: []
+    m_shaderFunctionDirectives: []
+    m_nativeDirectives: []
+    m_nativeDirectivesFoldout: 0
+    m_directivesSaveItems: []
+  m_nodeCategory: 3
+  m_customNodeCategory: 
+  m_previewPosition: 0
